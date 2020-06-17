@@ -22,7 +22,7 @@ try:
     input_s = raw_input('Script To Encypt : ')
     r = mc.dumps(compile(open(input_s, 'rb').read(), '<string>', 'exec'))
 except:
-    print 'Invalid File'
+    print ('Invalid File')
     sys.exit()
 
 s = base64.b16encode(zlib.compress(r))
